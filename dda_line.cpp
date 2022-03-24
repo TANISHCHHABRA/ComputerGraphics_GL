@@ -10,13 +10,13 @@ CS10
 #include <GL/gl.h>
 
 using namespace std;
-float x1, y1, x2, y2;
+float x1, Y1, x2, y2;
 
 void display(void)
 {
     float dy, dx, steps, x, y, k, xinc, yinc;
     dx = x2 - x1;
-    dy = y2 - y1;
+    dy = y2 - Y1;
     if (abs(dx) > abs(dy))
     {
         steps = abs(dx);
@@ -26,7 +26,7 @@ void display(void)
     xinc = dx / steps;
     yinc = dy / steps;
     x = x1;
-    y = y1;
+    y = Y1;
     glBegin(GL_POINTS);
     glVertex2i(x, y);
     glEnd();
@@ -56,8 +56,8 @@ int main(int argc, char** argv)
     cin >> x1;
     cout << "Enter the value of x2: ";
     cin >> x2;
-    cout << "Enter the value of y1: ";
-    cin >> y1;
+    cout << "Enter the value of Y1: ";
+    cin >> Y1;
     cout << "Enter the value of y2: ";
     cin >> y2;
 
