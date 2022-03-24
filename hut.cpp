@@ -16,7 +16,7 @@ void display()
 	glClearColor(1.0, 1.0, 1.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glColor3f(0.0f, 1.0f, 0.0f);
-	gluOrtho2D(0,100,0,100);
+	gluOrtho2D(0, 100, 0, 100);
 
 	glBegin(GL_TRIANGLES);
 	glVertex2f(10, 50);
@@ -25,6 +25,7 @@ void display()
 	glEnd();
 
 	glBegin(GL_QUADS);
+	glColor3f(1.0f, 0.0f, 0.0f);
 	glVertex2f(25, 90);
 	glVertex2f(75, 90);
 	glVertex2f(90, 50);
@@ -32,10 +33,19 @@ void display()
 	glEnd();
 
 	glBegin(GL_QUADS);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex2f(10, 50);
 	glVertex2f(40, 50);
 	glVertex2f(40, 20);
 	glVertex2f(10, 20);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.0f, 1.0f, 1.0f);
+	glVertex2f(40, 50);
+	glVertex2f(90, 50);
+	glVertex2f(90, 20);
+	glVertex2f(40, 20);
 	glEnd();
 
 	glFlush();
